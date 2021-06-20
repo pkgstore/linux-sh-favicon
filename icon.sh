@@ -4,9 +4,9 @@ size=( 16 24 32 48 64 72 80 96 128 144 152 167 180 192 196 256 300 512 )
 file_svg="icon.svg"
 file_ico="icon.ico"
 
-inkscape=$( command -v inkscape )
-convert=$( command -v convert )
-identify=$( command -v identify )
+inkscape="$( command -v inkscape )"
+convert="$( command -v convert )"
+identify="$( command -v identify )"
 
 png() {
   _check_file
