@@ -11,13 +11,13 @@ identify="$( command -v identify )"
 png() {
   _check_file
   for i in "${size[@]}"; do
-    ${inkscape} -w "${i}" -h "${i}" -b ffffff -o icon-"${i}".png "${file_svg}"
+    ${inkscape} -w "${i}" -h "${i}" -o icon-"${i}".png "${file_svg}"
   done
 }
 
 ico() {
   _check_file
-  ${convert} -density 256x256 -background "#ffffff" "${file_svg}" -define icon:auto-resize -colors 256 "${file_ico}"
+  ${convert} -density 256x256 -background transparent "${file_svg}" -define icon:auto-resize -colors 256 "${file_ico}"
   ${identify} "${file_ico}"
 }
 
